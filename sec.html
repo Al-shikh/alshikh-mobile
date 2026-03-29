@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>قسم الشاشات </title>
+    <link rel="icon" type="image/png" href="/ico.png">
+    <style>
+   @font-face {
+            font-family: 'CustomFont';
+            src: url('mh.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+       
+        body {
+            font-family: 'CustomFont', sans-serif;
+        }
+       
+        body {
+            
+            background-color: #212324;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #232f3e;
+            padding: 10px 20px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo img {
+            max-height: 50px;
+            width: auto;
+               border-radius: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+                0 6px 20px rgba(0, 0, 0, 0.2); 
+    transform: perspective(500px) rotateY(10deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .navbar .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar .menu li {
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            background-color: #37475a;
+        }
+
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 80px;
+margin-left: auto;
+margin-right: auto;
+          
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .search-input::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .search-btn {
+            background-color: #0feb37; 
+            color: rgb(245, 242, 242);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #51c609;
+        }
+
+       
+        .brands-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 10px 20px 20px;
+        }
+
+       
+        .brand-box {
+            border: 1px solid #f5f2f2;
+            border-radius: 5px;
+            padding: 15px;
+            width: calc(30% - 30px); 
+            background-color: rgb(9, 0, 0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain; 
+            margin-bottom: 10px;
+        }
+
+        .brand-box h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+       
+        @media (max-width: 768px) {
+            .brand-box {
+                width: calc(30% - 0px);
+            }
+
+            .brand-box img {
+                height: 100px;
+            }
+
+            .navbar .menu {
+                gap: 10px;
+            }
+
+            .navbar .menu li a {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logo">
+           
+            <img src="C:\Users\Kunan\Desktop\c0f147ca-d9ce-4e04-b6f7-78a72741236b.jpg" alt="Logo">
+        </div>
+            <ul class="menu">
+                <li> <H3> جميع انواع الشاشت الوكالة المتوفرة</H3></li>
+                <li></li>
+            </ul>
+        <div>
+            <ul class="menu">
+                <li> <H3> كما يمكننا توفير اي شاشة ب اسرع وقت</H3></li>
+
+            </ul>
+        </div>
+        
+    </div>
+
+   
+    <div class="container">
+        <form method="GET"  class="search-bar">
+            <input class="search-input" type="text" name="query" placeholder="..............ابحث عن منتج معين      ..............  "  required>
+            <button class="search-btn" type="submit">ابدا البحث</button>
+        </form>
+
+       
+        <div class="brands-container">
+          
+            <div class='brand-box'><a href='samsung.html'><img src='img/sam7.png' alt='SAMSUNG'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/app3.jpg' alt='Apple'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/red2.jpg' alt='redmi'>
+                
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/moto.png' alt='motorla'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/lg.jpg' alt='lg'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/lt.png' alt='lt'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/one2.png' alt='oneplus'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/huw.jpg' alt='huawie'>
+            </a></div>
+            <div class='brand-box'><a href='products.php?brand_id=11'><img src='img/vivo2.jpg' alt='vivo'>
+            </a></div>
+            
+</body>
+</html>
